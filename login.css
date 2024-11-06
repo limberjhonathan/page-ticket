@@ -1,3 +1,19 @@
+:root {
+    --bg-gradient: linear-gradient(135deg, #0f172a, #1e293b);
+    --bg-color: rgba(255, 255, 255, 0.1);
+    --white: #ffffff;
+    --input-border-color: #ddd;
+    --input-box-shadow: 0 0 40px rgba(255, 255, 255, 0.6);
+    --button-bg-color: #4f46e5;
+    --button-hover-box-shadow: 0 0 40px rgba(255, 255, 255, 0.5);
+    --button-hover-outline: 1px solid #ddd;
+    --text-color: #f2f5f8;
+    --placeholder-color: rgba(255, 255, 255, 0.2);
+    --border-radius: 8px;
+    --transition-speed: 0.3s;
+    --box-shadow-speed: 0.3s;
+}
+
 * {
     margin: 0;
     padding: 0;
@@ -6,12 +22,12 @@
 }
 
 body {
-    background: linear-gradient(135deg, #0f172a, #1e293b);
+    background: var(--bg-gradient);
     display: flex;
     justify-content: center;
     align-items: center;
     height: 100vh;
-    color: #ffffff;
+    color: var(--white);
 }
 
 .login-container {
@@ -20,7 +36,6 @@ body {
     align-items: center;
     height: 100vh;
     width: 100%;
-
     background-repeat: no-repeat;
     background-position: center center;
     background-size: cover;
@@ -28,7 +43,7 @@ body {
 }
 
 .login-box {
-    background: rgba(255, 255, 255, 0.1);
+    background: var(--bg-color);
     padding: 2rem;
     border-radius: 12px;
     width: 399px;
@@ -36,6 +51,7 @@ body {
     box-shadow: 0 8px 32px rgba(0, 0, 0, 0.2);
     backdrop-filter: blur(15px);
     border: 1px solid rgba(255, 255, 255, 0.2);
+    transform: scale(1.1);
 }
 
 .logo {
@@ -43,83 +59,101 @@ body {
     flex-direction: column;
     align-items: center;
     margin-bottom: 1rem;
+    gap: .8em;
+    padding-bottom: 2em;
 }
 
 .logo .icon {
-    background: #ffffff;
-    color: #4f46e5;
+    color: var(--placeholder-color);
+    background-color: var(--placeholder-color);
     font-size: 2rem;
-    font-weight: bold;
     padding: 0.5rem;
-    border-radius: 12px;
-    width: 50px;
-    height: 50px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    width: 65px;
+    height: 65px;
     margin-bottom: 0.5rem;
+    border-radius: 15px;
+    border: 1px solid var(--white);
 }
 
 .logo .name {
     width: 125px;
     height: 30px;
-    color: #ffffff;
+    color: var(--white);
 }
 
 h3 {
-    color: #cbd5e1;
-    margin-bottom: 1.5rem;
+    color: var(--text-color);
+    margin: 0em 0 1rem 0;
+    text-align: start;
+    font-weight: 200;
 }
 
 .input-group {
-    background: rgba(255, 255, 255, 0.1);
-    padding: 0.75rem;
-    border-radius: 8px;
-    margin-bottom: 1rem;
     display: flex;
+    justify-content: center;
     align-items: center;
-    border: 1px solid rgba(255, 255, 255, 0.2);
+    background: var(--bg-color);
+    margin-bottom: 1rem;
+    border-radius: var(--border-radius);
+    padding-left: 1em;
+    color: var(--placeholder-color);
+    transition: outline var(--transition-speed), box-shadow var(--transition-speed);
 }
 
 .input-group input {
+    border-radius: var(--border-radius);
+    padding: 0.75rem;
     background: transparent;
     border: none;
     outline: none;
     width: 100%;
-    color: #ffffff;
+    color: var(--white);
     font-size: 1rem;
     padding-left: 0.5rem;
+    transition: box-shadow var(--box-shadow-speed) ease-in;
+}
+
+.input-group:focus-within {
+    color: var(--white);
+    outline: 1px solid var(--input-border-color);
+    box-shadow: var(--input-box-shadow);
+}
+
+.input-group input::placeholder {
+    color: var(--placeholder-color);
 }
 
 .options {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    color: #9ca3af;
+    color: #eff1f5;
     font-size: 0.9rem;
     margin-bottom: 1.5rem;
 }
 
 .options a {
-    color: #9ca3af;
+    color: #eff1f5;
     text-decoration: none;
 }
 
 button {
-    background-color: #4f46e5;
-    color: #ffffff;
+    background-color: var(--button-bg-color);
+    color: var(--white);
     border: none;
-    padding: 0.75rem;
-    border-radius: 8px;
+    padding: 1rem;
+    border-radius: var(--border-radius);
     font-size: 1rem;
     cursor: pointer;
     width: 100%;
     margin-bottom: 1rem;
-    transition: background-color 0.3s ease;
+    box-sizing: border-box;
+    transition: box-shadow var(--box-shadow-speed), outline .2s ease-in;
 }
 
 button:hover {
-    background-color: #4338ca;
+    outline: var(--button-hover-outline);
+    box-shadow: var(--button-hover-box-shadow);
 }
 
 p {
@@ -128,7 +162,7 @@ p {
 }
 
 p a {
-    color: #4f46e5;
+    color: #7c76e7;
     text-decoration: none;
 }
 
