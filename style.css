@@ -1,0 +1,221 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital@0;1&family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
+:root {
+    --color-primary: rgba(88, 76, 244, 1);
+    --color-background: rgba(88, 76, 244, 0.15);
+    --color-text: #fff;
+    --color-white: #fff;
+    --color-text-tile: #363434;
+}
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: "Roboto", sans-serif;
+}
+
+html, body {
+    height: 100%;
+    width: 100%;
+}
+
+.container-icon {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    padding: .9em .8em;
+    font-size: 1.5em;
+    position: absolute;
+    color: var(--color-text);
+}
+
+.container-icon div {
+    display: flex;  
+}
+
+.icon {
+    cursor: pointer;
+    padding: .6em;
+    transition: transform .3s ease-in;
+}
+
+.icon:hover {
+    transform: scale(1.5);
+}
+
+.content-image {
+    width: 100%;
+    height: 400px;
+    overflow: hidden;
+}
+
+.content-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: top center;
+}
+
+.rounded-div {
+    top: 370px;
+    left: 0;
+    width: 100%;
+    height: 30px;
+    background: var(--color-white);
+    border-radius: 45px 45px 0 0;
+    z-index: 9;
+    position: absolute;
+    bottom: 1.5em;
+}
+
+.container-ticket {
+    padding: 0em 2em 5em 2em;
+    background-color: var(--color-white);
+}
+
+
+.btn {
+    font-size: 1em;
+    padding: .4em 1em;
+    border: 1px solid var(--color-primary);
+    background-color: transparent;
+    border-radius: 10px;
+    color: var(--color-primary);
+    transition: color .2s, background-color .3s;
+}
+
+.btn:hover {
+    background-color: var(--color-primary);
+    color: var(--color-text);
+}
+
+.peoples {
+    position: relative;
+    width: 100px;
+    display: flex;
+}
+
+.img {
+    width: 30px;
+    height: 30px;
+    background-color: blue;
+    border-radius: 50%;
+    position: absolute;
+    outline: 2px solid var(--color-text);
+}
+
+.img:nth-child(1) { left: 0; }
+.img:nth-child(2) { left: 20px; }
+.img:nth-child(3) { left: 40px; }
+.img:nth-child(4) { left: 60px; }
+.img:nth-child(5) { left: 80px; }
+
+.container-event {
+    display: flex;
+    gap: 1.5em;
+    padding-bottom: 1.3em;
+}
+
+.container-event hr {
+    margin-bottom: 2em;
+    color: #565454;
+}
+
+.title {
+    margin-bottom: 1em;
+    color: #565454;
+}
+
+.event {
+    display: flex;
+    align-items: center;
+    font-size: .9em;
+    font-weight: 500;
+}
+
+.first-container{
+    padding-top: 1.3em;
+}
+
+.container-detail{
+    display: flex;
+    align-items: center;
+    gap: 1.5em;
+    padding-bottom: 1.3em;
+}
+
+.container-detail i {
+    background-color: var(--color-background);
+    color: var(--color-primary);
+    font-size: 1.7em;
+    padding: 10px 13px;
+    border-radius: 50%;
+}
+
+.container-detail .title-event {
+    font-size: 15px;
+    color: var(--color-text-tile);
+}
+
+.container-detail .value {
+    margin-top: 3px;
+    font-size: 1.2em;
+    color: var(--color-primary);
+}
+.date{
+    margin-top: 8px;
+    font-weight: 500;
+    font-size: 14px;
+    color: var(--color-text-tile);
+}
+
+.content-btn{
+    background-color: var(--color_surface_default);
+    box-shadow: rgba(0, 0, 0, 0.08) 0px -12px 16px 0px;
+    left: 0px;
+    right: 0px;
+    bottom: 0px;
+    height: calc(0px + 100vh);
+    max-height: 80px;
+    position: fixed;
+    padding: 0px 24px;
+    opacity: 1;
+    display: flex;
+    align-items: center;
+}
+.content-btn a{
+    width: 100%;
+}
+
+.btn-submit{
+    border: none;
+    align-items: center;
+    box-shadow: 0px 7px 30px -10px rgba(var(--color_primary_default_rgb), 0.1);
+    background-color: rgb(88, 76, 244);
+    font-size: 16px;
+    font-weight: 400;
+    letter-spacing: 1.3px;
+    color: rgb(255, 255, 255);
+    line-height: 1;
+    border-radius: 10px;
+    padding: 12px 24px;
+    opacity: 1;
+    transition: background 200ms;
+    cursor: pointer;
+    place-self: center;
+    min-width: 0px;
+    min-height: 50px;
+    max-height: 50px;
+    width: calc(100% + 0px);
+    height: 50px;
+    margin: 0px;
+    z-index: 2;
+}
+
+
+@media (max-width: 768px) {
+    .container-ticket{
+        padding: 0 16px 5em 16px;
+    }
+}
