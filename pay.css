@@ -147,15 +147,19 @@ hr {
     border-radius: 20px;
     overflow: hidden;
     box-shadow: 0 0 15px 8px rgba(0, 0, 0, 0.1);
+    min-width: 350px;
 }
-.event-info .event-img{
-    background-color: blue;
+.event-info .event-img {
     width: 160px;
+    height: 160px;
+    overflow: hidden;
 }
 
-.event-info .event-img img{
+.event-info .event-img img {
     display: block;
     width: 100%;
+    height: 100%;
+    object-fit: cover;
 }
 
 .event-info .details{
@@ -197,4 +201,34 @@ hr {
     padding: .4em .8em;
     background-color: rgb(76, 76, 76);
     color: white;
+}
+
+.category .level{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 20px;
+    width: 100%;
+    border: 2px solid #e0dfdf;
+    border-radius: 25px;
+    padding: .7em .3em;
+    gap: .5em;
+    background-color: rgba(243, 245, 247, 1);;
+}
+
+.category .level div{
+    height: 12px;
+    width: 100%;
+    padding: .3em;
+    border-radius: 15px;
+}
+
+.category .level div:nth-child(1){
+    background: rgba(57, 234, 116, 0.45);
+}
+.category .level div:nth-child(2){
+    background: none rgba(234, 196, 57, 0.45);
+}
+.category .level div:nth-child(3){
+    background: none rgb(217, 33, 78)
 }
