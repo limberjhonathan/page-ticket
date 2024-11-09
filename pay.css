@@ -162,6 +162,7 @@ hr {
     display: flex;
     flex-direction: column;
     gap: 0.7em;
+    word-wrap: break-word;
 }
 
 .details div:nth-child(1) {
@@ -177,7 +178,7 @@ hr {
     background-color: rgb(239, 239, 239);
     border-radius: 10px;
     text-align: center;
-    margin: 0 1em;
+    margin: 0 1em 0 0;
 }
 
 .date div:nth-child(1) {
@@ -349,4 +350,28 @@ svg {
 
 p span{
     font-weight: bold;
+}
+
+@media (max-width: 768px) {
+    .details div{
+        text-align: center;
+    }
+    
+    .event-description{
+        width: 90%;   
+    }
+
+    .header-ticket .return{
+        opacity: 0;
+        width: 10px;
+        order: 3;
+    }
+    .header-ticket .content-img{
+        justify-content: center;
+        order: 2;
+    }
+    .header-ticket .return-cel{
+        order: 1;
+        color: #000;
+    }
 }
