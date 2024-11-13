@@ -39,8 +39,8 @@ html, body {
 }
 
 .description{
-    max-width: 1200px;
-    width: 1180px;
+    max-width: 1350px;
+    width: 1300px;
     padding: 0 1.2em;
 }
 
@@ -533,7 +533,92 @@ p span{
     min-width: 35.7%;;
 }
 
-@media (max-width: 810px) {
+.pay-format h2{
+    padding: 1em 0 .6em 0;
+}
+
+.payment-option {
+    border: 2px solid #e0e0e0;
+    border-radius: 8px;
+    padding: 15px;
+    margin-bottom: 10px;
+    transition: background .2s ease-in, border-color .2s ease-in;
+    box-sizing: border-box;
+  
+}
+
+.payment-option.card{
+    background: rgba(168, 165, 165, .2);
+}
+
+.payment-option.card span{
+    display: block;
+    font-size: .9em;
+}
+
+.payment-content{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 2em;
+}
+
+.payment-content .value{
+    background-color: #6858f3;
+    color: #fff;
+    padding: .5em .7em;
+    border-radius: 10px;
+}
+
+.payment-content .card{
+    color: var(--color-text);
+    font-weight: 700;
+    background: rgba(168, 165, 165, .3);
+}
+
+.pix{
+    display: flex;
+}
+
+.pix .pay-content{
+    display: flex;
+    align-items: center;
+    color: #6858f3;
+    font-size: 1em;
+    gap: 1em;
+}
+
+.pix .pay-content .card-text{
+    color: #dc3636;
+    margin-left: 10px;
+}
+
+
+.pix .pay-content svg{
+    font-size: 2em;
+}
+
+.radio input[type="radio"] {
+    appearance: none;
+    width: 18px;
+    height: 18px;
+    border: 2px solid #e0e0e0;
+    border-radius: 50%;
+    outline: none;
+    cursor: pointer;
+}
+
+.radio input[type="radio"]:checked {
+    border-color: #6858f3;
+    background-color: #6858f3;
+}
+
+.payment-option:has(input[type="radio"]:checked) {
+    background-color: #f0f0ff;
+    border-color: #6858f3;
+}
+
+@media (max-width: 1030px) {
     .event{
         width: 100%;
     }
