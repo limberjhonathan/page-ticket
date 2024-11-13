@@ -84,9 +84,10 @@ hr {
 
 .content-progress{
     display: flex;
-    gap: 2em;
+    gap: 4em;
     justify-content: space-between;
     width: 100%;
+    flex-wrap: wrap;
 
 }
 
@@ -94,7 +95,6 @@ hr {
     display: flex;
     align-items: center;
     justify-content: center;
-    /* margin-bottom: 20px; */
 }
 
 .time-box {
@@ -121,7 +121,7 @@ hr {
 .warning{
     min-width: 270px;
     width: 100%;
-    margin: 0 15px;
+    margin: 0 0 0 15px;
 }
 
 .warning h2 {
@@ -146,7 +146,7 @@ hr {
     display: flex;
     align-items: center;
     height: 30px;
-    width: 58%;
+    min-width: 58%;
 }
 
 .progress-bar {
@@ -442,7 +442,7 @@ p span{
     .event-description{
         width: 98%;;
     }
-
+    
     .details div{
         text-align: center;
     }
@@ -450,7 +450,7 @@ p span{
     .description{
         width: 100%;
     }
-
+    
     .header-ticket .return{
         opacity: 0;
         width: 10px;
@@ -466,39 +466,75 @@ p span{
     }
 }
 
-@media (max-width: 880px){
-    .content-progress{
-        flex-wrap: wrap;
-    }
-
+@media(max-width: 1178px){
     .content-box{
         width: 100%;
+    }
+
+    .content-progress{
+        justify-content: center;
     }
 
 }
 
 .container {
-    width: 300px;
     background-color: white;
-    padding: 20px;
-    border: 1px solid #ddd;
+    margin-top: 2.3em;
+    /* padding: 20px; */
     border-radius: 8px;
     text-align: center;
+    min-width: 302px;
 }
 
-.ticket-info p {
-    font-size: 14px;
+.ticket-info {
     color: #666;
-    margin-bottom: 20px;
+    text-align: start;
+}
+
+.ticket-info h3{
+    font-weight: 600;
+    font-size: 1.3em;
 }
 
 .price {
-    font-size: 14px;
+    display: flex;
+    border: 1px solid #ddd;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 1.2em;
+    margin-top: 1.5em;
     color: #333;
+    padding: .5em;
+    border-radius: 15px;
+}
+
+.price .total-price{
+    font-size: 1.5em;
 }
 
 .total-price {
     font-size: 24px;
     font-weight: bold;
     color: #333;
+}
+
+/* ----------------------------------------------------------------------divisor 50%----------------------------------------------------------- */
+.content-pay-event{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.event{
+    width: 58%;
+}
+
+.pay{
+    min-width: 35.7%;;
+}
+
+@media (max-width: 810px) {
+    .event{
+        width: 100%;
+    }
 }
